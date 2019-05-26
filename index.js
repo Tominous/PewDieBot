@@ -53,7 +53,7 @@ bot.on("message", function (msg) {
 
                 var json = JSON.parse(text)
                 difference = jso.items[0].statistics.subscriberCount - json.items[0].statistics.subscriberCount
-                // msg.channel.send(`\`\`\`java\n PewDiePie: ` + PewSubs + `\n T-Series: ` + TSubs + `\n Difference: ` + difference + `\n\`\`\``)
+                 msg.channel.send(`\`\`\`java\n PewDiePie: ` + PewSubs + `\n T-Series: ` + TSubs + `\n Difference: ` + difference + `\n\`\`\``)
                 var lead;
                 if (jso.items[0].statistics.subscriberCount > json.items[0].statistics.subscriberCount) {
                     lead = "PewDiePie"
@@ -73,7 +73,7 @@ bot.on("message", function (msg) {
                         .setTitle("Tweet about it")
                         .setAuthor(bot.user.username, bot.user.avatarURL)
                         .setColor("#f44e42")
-                        // .setDescription("")
+                         .setDescription("")
                         .setFooter("", bot.user.avatarURL)
                         .setTimestamp()
                         .setURL(leadTweet())
